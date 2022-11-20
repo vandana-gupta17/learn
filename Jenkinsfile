@@ -100,7 +100,7 @@ pipeline {
             steps{
                 script{
                     sh "mvn install -DskipTests"
-                    sh "mvn cargo:run -P tomcat90 &"
+                    sh "nohup mvn cargo:run -P tomcat90 &"
                     sh "echo Jpetstore webapp url is : ${JPET}"
                 }
             }
