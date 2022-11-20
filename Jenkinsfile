@@ -111,11 +111,11 @@ pipeline {
             }
         }       
     }//stages
-    post{
-        success{
-            echo("************************** Application Started**************************")
-            echo "Jpetstore webapp url is : ${JPET}"
-            echo("************************** Application  Completed**************************")
-        }
-    }
+    //post{
+      //  success{
+        //    echo("************************** Application Started**************************")
+        //    echo "Jpetstore webapp url is : ${JPET}"
+        //    echo("************************** Application  Completed**************************")
+       // }
+    //}
 }
