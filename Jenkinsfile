@@ -99,14 +99,14 @@ pipeline {
         }
         stage("Deploy Stage") {
             steps{
-                script{
+                
                     echo "${WORKSPACE}"
                     sh "mvn install -DskipTests"
                     echo "nohup mvn cargo:run -P tomcat90 </dev/null >/dev/null 2>&1 & > ${WORKSPACE}/startjpetstore.sh"
                     sh "chmod +x ${WORKSPACE}/startjpetstore.sh"
                     sh './startjpetstore.sh'
                     //sh "echo Jpetstore webapp url is : ${JPET}"
-                }
+                
             }
         }       
     }//stages
