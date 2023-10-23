@@ -36,7 +36,7 @@ pipeline {
             steps{
                    cleanWs()
                         echo("************************** Code Checkout Start**************************")
-                              checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitlabpat', url: 'https://gitlab.dryicelabs.com/devops/jpetstore.git']], config: 'http.sslVerify=false'])
+                              checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitlabpat', url: 'https://nvwlminfgit001.dryicelabs.com/devops/jpetstore.git']], config: 'http.sslVerify=false'])
                         echo("************************** Code Checkout End****************************")
                   }
 
